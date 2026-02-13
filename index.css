@@ -1,0 +1,172 @@
+html{
+    scroll-behavior: smooth;
+}
+#hero{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: linear-gradient(rgba(0,0,0,0.5)20%, rgba(0,0,0,0.5)20%), url("28399.jpg");
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    main{
+        color: white;
+        text-align: center;
+        align-items: center;
+        padding-top: 20%;
+    }
+}
+#about-section{
+    background: hsl(0, 0%, 20%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+
+    section{
+        color: white; 
+        margin: 10% 5%;
+    }
+    #carouselExampleIndicators{
+        height: auto;
+        width: auto;
+
+        img{
+            backdrop-filter: blur(20px);
+            width: auto;
+            height: auto;
+        }
+    }
+    #services{
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+#more-info{
+    background: hsl(0, 0%, 15%);
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 10% 20px;
+
+    .info-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+
+        .info-item{
+            flex: 111;
+            background: hsl(0, 0%, 30%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: left;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            transition: 0.8s ease;
+            animation: cardAnimation 10s ease 0s infinite;
+        }
+        /*.info-item:hover{
+            transform: translateY(-10px) scale(0.9);
+            transition:  0.3s ease;
+        }*/
+    }
+}
+/*My info-item animation, responsible for scalling and rotating the cards*/
+@keyframes cardAnimation {
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.7);
+    }
+    50% {
+        transform: translateY(-10px) scale(0.80) rotate(5deg);
+            box-shadow: 10px 10px 20px rgba(48, 47, 47, 0.9);
+    }
+    100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.7);
+    }
+}
+#team-section{
+    display: flex;
+    flex-direction: column;
+    background: hsl(0, 0%, 25%);
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 10% 20px;
+
+    .team-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+
+        .team-member{
+            background: hsl(0, 0%, 30%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            flex: 1 1 1;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+        }
+    }
+}
+    #footer-section{
+        footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            background: hsl(0, 0%, 20%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+
+            section{
+                text-align: center;
+
+                ul{
+                    list-style: none;
+                    padding: 0;
+
+                    li{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+         small{
+            font-size: 10px;
+         }
+    }
+@media (max-width:800px) {
+    #hero{
+
+        main{
+            padding-top: 50%;
+        }
+    }
+    #about-section{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    #footer-section{
+        footer{
+            flex-direction: column;
+            gap: 10px;
+        }
+         small{
+            font-size: 10px;
+         }
+    }
+}
